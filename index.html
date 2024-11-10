@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/pruebas.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <div class="inicio">
+
+        <div>
+            <form class="endpoints" id="api-form" method="get">
+                <div class="apartados">
+                    <label for="baseUrl">Url API: </label>
+                    <input type="text" name="baseUrl" id="baseUrl" placeholder="http://localhost:8080">    
+                </div>
+                
+                <div class="apartados">
+                    <label for="getAll">Endpoint para obtener todo: </label>
+                    <input type="text" id="getAll" name="getAll" placeholder="api/v1/product">    
+                </div>
+    
+                <div class="apartados">
+                    <label for="insert">Endpoint de insertar</label>
+                    <input type="text" id="insert" name="insert" placeholder="api/v1/product/insert">                
+                </div>
+    
+                <div class="apartados">
+                    <label for="edit">Endpoint de editar</label>
+                    <input type="text" id="edit" name="edit" placeholder="api/v1/product/edit">      
+                </div>
+    
+                <div class="apartados">
+                    <label for="delete">Endpoint de insertar</label>
+                    <input type="text" id="delete" name="delete" placeholder="api/v1/product/delete">                
+                </div>
+    
+                <button type="submit">Ver tabla</button>
+            </form>
+        </div>
+
+        <div id="list"></div>
+
+        <h1>Insertar</h1>
+        <div id="insertarForm">
+            <form class="insertar" id="insertarElemento" method="POST">    
+                <div class="apartados">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="productName" name="productName" required> 
+                </div>
+    
+                <div class="apartados">
+                    <label for="price">Precio:</label>
+                    <input type="number" id="productPrice" name="productPrice" required>
+                </div>
+    
+                <button type="submit">Insertar</button>
+            </form>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
